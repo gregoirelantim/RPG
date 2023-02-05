@@ -10,6 +10,6 @@
 int main(void)
 {
     glo all;
-    init_all(all);
+    test(&all);
     return 0;
 }

@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2023
-** ok
+** TEST
 ** File description:
 ** my.h
 */
 
-#ifndef PUISSANCE_4_H
-    #define PUISSANCE_4_H
+#ifndef TEST_H
+    #define TEST_H
     #include <stdlib.h>
     #include <stdio.h>
     #include <unistd.h>
@@ -19,7 +19,6 @@
     #include <SFML/Graphics.h>
     #include <time.h>
 
-#define SHIFUMI_H
     #define WINDOW all->setting.window
     #define EVENT all->setting.event
     #define IMAGES all->images
@@ -52,14 +51,24 @@ typedef struct {
     sfVector2f pos;
     sfVector2f size;
     sfIntRect rectangle;
-} perso;
+} Perso;
 
 typedef struct {
     Parameter setting;
     Image images[6];
-    Screen perso[3];
+    Perso perso[3];
     Time *clock_time;
 } glo;
 
+int test(glo *all);
+int test_menu(glo *all);
+int init_window(glo *all);
+int init_menu(glo *all);
+int init_menu_images(glo *all);
+int init_menu_pos(glo *all);
+int init_menu_scale(glo *all);
+int init_menu_sprite(glo *all);
+int init_menu_texture(glo *all);
+int display_menu(glo *all);
 
 #endif

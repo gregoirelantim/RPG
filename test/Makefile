@@ -1,11 +1,13 @@
 ##
 ## EPITECH PROJECT, 2023
-## ok
+## RPG
 ## File description:
-## ok
+## test
 ##
 
-SRC	=	lib/p4.c	\
+SRC	=	lib/init_menu.c	\
+		lib/init_perso.c	\
+		lib/test.c	\
 
 MAIN    =       lib/main.c
 
@@ -13,7 +15,7 @@ OBJ     =       $(SRC:.c=.o)
 
 MIN     =       $(MAIN.:.c=.o)
 
-NAME    =       my_plato
+NAME    =       test
 
 FLAGS	=	-Wall -Wextra -lncurses -l csfml-graphics -lcsfml-system -lcsfml-window
 

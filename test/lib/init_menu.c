@@ -7,7 +7,7 @@
 
 #include "../include/my.h"
 
-int init_texture(glo *all)
+int init_menu_texture(glo *all)
 {
     for (int i = 0; i < 6; i++) {
         sfSprite_setTexture(IMAGES[i].sprite, IMAGES[i].texture, sfTrue);
@@ -19,7 +19,7 @@ int init_texture(glo *all)
     return 0;
 }
 
-int init_sprite(glo *all)
+int init_menu_sprite(glo *all)
 {
     for (int i = 0; i < 6; i++)
         IMAGES[i].sprite = sfSprite_create();
@@ -27,7 +27,7 @@ int init_sprite(glo *all)
     return 0;
 }
 
-int init_scale(glo *all)
+int init_menu_scale(glo *all)
 {
     IMAGES[0].scale.x = 3.65;
     IMAGES[0].scale.y = 2.2;
@@ -49,7 +49,7 @@ int init_scale(glo *all)
     return 0;
 }
 
-int init_pos(glo *all)
+int init_menu_pos(glo *all)
 {
     IMAGES[1].pos.x = 900;
     IMAGES[1].pos.y = 540;
@@ -69,7 +69,7 @@ int init_pos(glo *all)
     return 0;
 }
 
-int init_images(glo *all)
+int init_menu_images(glo *all)
 {
     IMAGES[0].texture = sfTexture_createFromFile("lib/back_ground_menu.png", NULL);
     IMAGES[1].texture = sfTexture_createFromFile("lib/bouton_start.jpg", NULL);
@@ -80,19 +80,18 @@ int init_images(glo *all)
     return 0;
 }
 
-int shifumi_init_menu(glo *all)
+int init_menu(glo *all)
 {
     init_window(all);
-    init_images(all);
-    init_sprite(all);
-    init_scale(all);
-    init_pos(all);
-    init_texture(all);
-    init_perso(all);
+/*    init_menu_images(all);
+    init_menu_sprite(all);
+    init_menu_scale(all);
+    init_menu_pos(all);
+    init_menu_texture(all);*/
     return 0;
 }
 
-int shifumi_init_window(glo *all)
+int init_window(glo *all)
 {
     all->setting.mode.bitsPerPixel = 32;
     all->setting.mode.width = 1920;
