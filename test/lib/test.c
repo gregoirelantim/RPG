@@ -24,9 +24,11 @@ int main_game(glo *all)
     return 0;
 }
 
-int menu_click(glo *all)
+int menu_click(glo *all, char c)
 {
     sfVector2i mouse = sfMouse_getPositionRenderWindow(WINDOW);
+    if (c == 'a')
+        main_game(all);
     if (mouse.x >= 802 && mouse.x <= 1100
         && EVENT.type == sfEvtMouseButtonPressed) {
         if (mouse.y >= 730 && mouse.y <= 977) {
@@ -38,6 +40,7 @@ int menu_click(glo *all)
 
 int display_menu(glo *all)
 {
+    char c;
     while (sfRenderWindow_isOpen(WINDOW)) {
         sfRenderWindow_clear(WINDOW, sfWhite);
         while (sfRenderWindow_pollEvent(WINDOW, &EVENT))
@@ -45,7 +48,8 @@ int display_menu(glo *all)
         for (int i = 0; i < 2; i++)
             sfRenderWindow_drawSprite(WINDOW, IMAGES[i].sprite, NULL);
         sfRenderWindow_display(WINDOW);
-        menu_click(all);
+        c = getch();
+        menu_click(all, c);
     }
     return 0;
 }

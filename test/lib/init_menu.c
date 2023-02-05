@@ -38,7 +38,7 @@ int init_menu_scale(glo *all)
 
 int init_menu_pos(glo *all)
 {
-    IMAGES[0].pos.x = -1000;
+    IMAGES[0].pos.x = -950;
     IMAGES[0].pos.y = 2;
 
     IMAGES[1].pos.x = 800;
@@ -71,7 +71,7 @@ int init_window(glo *all)
 {
     all->setting.mode.bitsPerPixel = 32;
     all->setting.mode.width = 1920;
-    all->setting.mode.height = 1080;
+    all->setting.mode.height = 1200;
     all->setting.window = sfRenderWindow_create
         (all->setting.mode, "MY_POKEMON", sfResize | sfClose, NULL);
 
