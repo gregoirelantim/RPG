@@ -55,7 +55,7 @@ typedef struct {
 
 typedef struct {
     Parameter setting;
-    Image images[6];
+    Image images[2];
     Perso perso[3];
     Time *clock_time;
 } glo;

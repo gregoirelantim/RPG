@@ -13,7 +13,8 @@ int display_menu(glo *all)
         sfRenderWindow_clear(WINDOW, sfWhite);
         while (sfRenderWindow_pollEvent(WINDOW, &EVENT))
             EVENT.type == sfEvtClosed ? sfRenderWindow_close(WINDOW) : 0;
-//        sfRenderWindow_drawSprite(WINDOW, IMAGES[0].sprite, NULL);
+        for (int i = 0; i < 2; i++)
+            sfRenderWindow_drawSprite(WINDOW, IMAGES[i].sprite, NULL);
         sfRenderWindow_display(WINDOW);
     }
     return 0;
