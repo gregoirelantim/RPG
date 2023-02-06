@@ -11,7 +11,7 @@ int init_menu_texture(glo *all)
 {
     for (int i = 0; i < 2; i++) {
         sfSprite_setTexture(IMAGES[i].sprite, IMAGES[i].texture, sfTrue);
-	sfSprite_setScale(IMAGES[i].sprite, IMAGES[i].scale);
+        sfSprite_setScale(IMAGES[i].sprite, IMAGES[i].scale);
         sfSprite_setPosition(IMAGES[i].sprite, IMAGES[i].pos);
     }
     return 0;
@@ -43,15 +43,15 @@ int init_menu_pos(glo *all)
 
     IMAGES[1].pos.x = 800;
     IMAGES[1].pos.y = 700;
-    
     return 0;
 }
 
 int init_menu_images(glo *all)
 {
     IMAGES[0].texture = sfTexture_createFromFile("menu_img/menu.jpg", NULL);
-    IMAGES[1].texture = sfTexture_createFromFile("menu_img/menu_bouton.png", NULL);
-    
+    IMAGES[1].texture =
+        sfTexture_createFromFile("menu_img/menu_bouton.png", NULL);
+
     return 0;
 }
 

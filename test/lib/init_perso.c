@@ -68,6 +68,6 @@ int init_perso_all(glo *all)
     init_perso_pos(all);
     init_perso_rect(all);
     init_perso_texture(all);
-    
+
     return 0;
 }
