@@ -22,7 +22,7 @@
     #define WINDOW all->setting.window
     #define EVENT all->setting.event
     #define IMAGES all->images
-    #define SCREEN all->perso
+    #define SPRITE all->perso
 
 typedef struct {
     sfClock *clock;
@@ -51,6 +51,10 @@ typedef struct {
     sfVector2f pos;
     sfVector2f size;
     sfIntRect rectangle;
+    sfClock *clock;
+    sfTime time;
+    float seconds;
+    Time clock_time[2];
 } Perso;
 
 typedef struct {
@@ -70,5 +74,6 @@ int init_menu_scale(glo *all);
 int init_menu_sprite(glo *all);
 int init_menu_texture(glo *all);
 int display_menu(glo *all);
+int init_perso_all(glo *all);
 
 #endif
