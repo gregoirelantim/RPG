@@ -12,6 +12,7 @@ SRC	=	lib/init_menu.c	\
 		lib/menu_game.c	\
 		lib/player_animation.c	\
 		lib/player_move.c	\
+		lib/player.c	\
 
 MAIN    =       lib/main.c
 

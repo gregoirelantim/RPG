@@ -9,12 +9,16 @@
 
 int player_move_right_left(glo *all, int nb, int sprite)
 {
+    if (map_limit(all, nb, 1) == 1)
+        return 1;
     SPRITE[sprite].pos.x += nb;
     return 0;
 }
 
 int player_move_up_down(glo *all, int nb, int sprite)
 {
+    if (map_limit(all, nb, 2) == 1)
+	return 1;
     SPRITE[sprite].pos.y += nb;
     return 0;
 }

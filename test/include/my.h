@@ -91,5 +91,7 @@ int display_menu(glo *all);
 int test_menu(glo *all);
 int main_game(glo *all);
 int display_game(glo *all);
+int player_key_pressed(glo *all);
+int map_limit(glo *all, int nb, int i);
 
 #endif
