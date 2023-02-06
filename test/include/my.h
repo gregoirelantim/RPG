@@ -25,6 +25,10 @@
     #define SPRITE all->perso
 
 typedef struct {
+    int animation;
+} Player;
+
+typedef struct {
     sfClock *clock;
     sfTime time;
     float seconds;
@@ -62,6 +66,7 @@ typedef struct {
     Image images[2];
     Perso perso[3];
     Time *clock_time;
+    Player player;
 } glo;
 
 int test(glo *all);
@@ -75,5 +80,16 @@ int init_menu_sprite(glo *all);
 int init_menu_texture(glo *all);
 int display_menu(glo *all);
 int init_perso_all(glo *all);
+int stop_player_animation(glo *all);
+int animation_dresseur_direction(glo *all, int nb);
+int animation_dresseur(glo *all, int a);
+int player_move(glo *all);
+int player_move_up_down(glo *all, int nb, int sprite);
+int player_move_right_left(glo *all, int nb, int sprite);
+int menu_click(glo *all, char c);
+int display_menu(glo *all);
+int test_menu(glo *all);
+int main_game(glo *all);
+int display_game(glo *all);
 
 #endif
