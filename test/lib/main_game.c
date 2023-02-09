@@ -13,6 +13,7 @@ int display_game(glo *all)
         sfRenderWindow_clear(WINDOW, sfBlack);
         while (sfRenderWindow_pollEvent(WINDOW, &EVENT))
             EVENT.type == sfEvtClosed ? sfRenderWindow_close(WINDOW) : 0;
+        draw_map(all);
         sfRenderWindow_drawSprite(WINDOW, SPRITE[0].sprite, NULL);
         player_key_pressed(all);
     }
@@ -22,6 +23,7 @@ int display_game(glo *all)
 int main_game(glo *all)
 {
     init_perso_all(all);
+    init_map_all(all);
     display_game(all);
     return 0;
 }

@@ -13,7 +13,7 @@ int init_perso_texture(glo *all)
         sfSprite_setTexture(SPRITE[i].sprite, SPRITE[i].texture, sfTrue);
         sfSprite_setScale(SPRITE[i].sprite, SPRITE[i].scale);
 	sfSprite_setPosition(SPRITE[i].sprite, SPRITE[i].pos);
-        sfSprite_setTextureRect(SPRITE[i].sprite, SPRITE[0].rectangle);
+        sfSprite_setTextureRect(SPRITE[i].sprite, SPRITE[i].rectangle);
     }
     return 0;
 }

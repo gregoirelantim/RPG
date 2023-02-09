@@ -13,6 +13,8 @@ SRC	=	lib/init_menu.c	\
 		lib/player_animation.c	\
 		lib/player_move.c	\
 		lib/player.c	\
+		lib/init_map.c	\
+		lib/map_draw.c	\
 
 MAIN    =       lib/main.c
 

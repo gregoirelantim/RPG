@@ -23,6 +23,7 @@
     #define EVENT all->setting.event
     #define IMAGES all->images
     #define SPRITE all->perso
+    #define MAP all->maps
 
 typedef struct {
     int animation;
@@ -55,6 +56,15 @@ typedef struct {
     sfVector2f pos;
     sfVector2f size;
     sfIntRect rectangle;
+} Maps;
+
+typedef struct {
+    sfTexture* texture;
+    sfSprite *sprite;
+    sfVector2f scale;
+    sfVector2f pos;
+    sfVector2f size;
+    sfIntRect rectangle;
     sfClock *clock;
     sfTime time;
     float seconds;
@@ -65,8 +75,10 @@ typedef struct {
     Parameter setting;
     Image images[2];
     Perso perso[3];
+    Maps maps[1];
     Time *clock_time;
     Player player;
+    char **map;
 } glo;
 
 int test(glo *all);
@@ -93,5 +105,16 @@ int main_game(glo *all);
 int display_game(glo *all);
 int player_key_pressed(glo *all);
 int map_limit(glo *all, int nb, int i);
+int init_map_scale(glo *all);
+int init_map_pos(glo *all);
+int init_map_rect(glo *all);
+int init_map_images(glo *all);
+int init_map_texture(glo *all);
+int init_map_sprite(glo *all);
+int init_map_all(glo *all);
+int draw_map(glo *all);
+int new_map_to_draw(glo *all, char **map);
+int map_condition(glo *all, int nb);
+int centre_pokemon(glo *all);
 
 #endif
