@@ -17,7 +17,6 @@ int player_key_pressed(glo *all)
         animation_dresseur(all, a);
     } else
         stop_player_animation(all);
-    sfRenderWindow_display(WINDOW);
 
     return 0;
 }

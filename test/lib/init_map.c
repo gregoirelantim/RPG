@@ -12,6 +12,9 @@ int init_map_scale(glo *all)
     MAP[0].scale.x = 1;
     MAP[0].scale.y = 1;
 
+    MAP[1].scale.x = 1;
+    MAP[1].scale.y = 1;
+
     return 0;
 }
 
@@ -36,13 +39,14 @@ int init_map_rect(glo *all)
 int init_map_images(glo *all)
 {
     MAP[0].texture = sfTexture_createFromFile("map/set_2.png", NULL);
+    MAP[1].texture = sfTexture_createFromFile("map/set_3.png", NULL);
 
     return 0;
 }
 
 int init_map_texture(glo *all)
 {
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 2; i++) {
         sfSprite_setTexture(MAP[i].sprite, MAP[i].texture, sfTrue);
         sfSprite_setScale(MAP[i].sprite, MAP[i].scale);
 	sfSprite_setPosition(MAP[i].sprite, MAP[i].pos);
@@ -53,7 +57,7 @@ int init_map_texture(glo *all)
 
 int init_map_sprite(glo *all)
 {
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < 2; i++)
         MAP[i].sprite = sfSprite_create();
 
     return 0;

@@ -75,10 +75,12 @@ typedef struct {
     Parameter setting;
     Image images[2];
     Perso perso[3];
-    Maps maps[1];
+    Maps maps[2];
     Time *clock_time;
     Player player;
     char **map;
+    int pos_x;
+    int pos_y;
 } glo;
 
 int test(glo *all);
@@ -112,9 +114,11 @@ int init_map_images(glo *all);
 int init_map_texture(glo *all);
 int init_map_sprite(glo *all);
 int init_map_all(glo *all);
-int draw_map(glo *all);
+int draw_map(glo *all, char **map);
 int new_map_to_draw(glo *all, char **map);
 int map_condition(glo *all, int nb);
 int centre_pokemon(glo *all);
+int map_load(glo *all);
+int map_move(glo *all);
 
 #endif
